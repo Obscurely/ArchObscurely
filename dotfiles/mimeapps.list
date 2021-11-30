@@ -1,0 +1,12 @@
+[Default Applications]
+text/plain=notepadqq.desktop
+application/json=notepadqq.desktop
+x-scheme-handler/kite=kite-copilot.desktop
+text/html=brave.desktop
+image/jpeg=org.xfce.ristretto.desktop
+
+[Added Associations]
+text/plain=notepadqq.desktop;
+application/json=notepadqq.desktop;
+image/jpeg=org.xfce.ristretto.desktop;
+application/octet-stream=notepadqq.desktop;

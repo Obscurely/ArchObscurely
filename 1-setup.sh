@@ -46,8 +46,8 @@ sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Sy --noconfirm
 
 # Enable chaotic-aur
-sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key FBA220DFC880C036
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm
 echo "[chaotic-aur]
 Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
@@ -71,7 +71,6 @@ PKGS=(
 'alsa-lib' # sound lib
 'alsa-plugins' # audio plugins
 'alsa-utils' # audio utils
-'ark' # compression
 'autoconf' # build
 'automake' # build
 'base' # essential
@@ -92,6 +91,7 @@ PKGS=(
 'easyeffects' # audio effects
 'efibootmgr' # EFI boot
 'exfat-utils' # exfat file support
+'feh' # sets wallpaper
 'firefox' # firefox client
 'fuse2' # fuse
 'fuse3' # fuse
@@ -116,6 +116,7 @@ PKGS=(
 'gst-libav' # gst libav
 'gst-plugins-good' # gst plugins good
 'gst-plugins-ugly' # gst plugins ugly
+'gvfs' # thunar trash support etc
 'haveged' # antropy generator
 'htop' # console procces viewer
 'iptables-nft' # iptables nft
@@ -161,13 +162,14 @@ PKGS=(
 'libnewt' # system lib
 'libtool' # programming lib
 'lightdm' # lightweight display manager
-'lightdm-gtk-greeter' # greeter for lightdm
+'lightdm-webkit2-greeter' # greeter for lightdm
 'linux-zen' # linux zen kernel
 'linux-firmware' # firmware filex for linux
 'linux-zen-headers' # linux zen kernel headers
 'linux-tkg-pds' # linux tkg kernel with pds cpu scheduler
 'linux-tkg-pds-headers' # linux tkg kernel with pds cpu scheduler headers
 'lutris' # lutris client 
+'lxappearance' # configure os appearance
 'lzop' # compression
 'make' # make util for building code
 'milou' # arm build system
@@ -189,6 +191,9 @@ PKGS=(
 'opencl-icd-loader' # wine dependency
 'p7zip' # compression
 'pacman-contrib' # essential
+'papirus-icon-theme' # icons theme
+'pavucontrol' # audio panel
+'peazip' # archive manager
 'postman' # software for sending http requests
 'powerpill' # pacman that download's from multiple mirrors
 'python' # python binaries
@@ -202,7 +207,7 @@ PKGS=(
 'ristretto' # image viewer
 'rofi' # window switcher
 'rsync' # sync files
-'spectacle' # screenshot utility
+'shutter' # screenshot utility
 'steam' # steam client
 'sdl_ttf' # some sort of font lib
 'speedtest-cli' # test network speed

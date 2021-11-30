@@ -42,17 +42,67 @@ done
 # Upgrade with yay
 yay -Syyu --noconfirm
 
+echo "Customizing system"
+
+# copy backgrounds to their folder and link them
+cp $HOME/ArchObscurely/background.jpg $HOME/Documents
+sudo ln -s "$HOME/Documents/background.jpg" /usr/share/backgrounds/background.jpg
+
+# installing polybar themes
+cd $HOME/Downloads/
+git clone --depth=1 https://github.com/adi1090x/polybar-themes.git
+cd polybar-themes
+chmod +x setup.sh
+./setup.sh
+sleep 3 # wait 3 to make sure it installed
+
+# copy lightdm config
+cd $HOME/Downloads/
+wget git.io/webkit2 -O theme.tar.gz
+mkdir glorious
+mv theme.tar.gz glorious/
+cd glorious
+tar zxvf theme.tar.gz
+rm theme.tar.gz
+cd ..
+sudo mv glorious/ /usr/share/lightdm-webkit/themes/
+sudo cp $HOME/ArchObscurely/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp $HOME/ArchObscurely/lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
+
+# installing rofi themes
+cd $HOME/Downloads/
+git clone --depth=1 https://github.com/adi1090x/rofi.git
+cd rofi
+chmod +x setup.sh
+./setup.sh
+sleep 3 # wait 3 to make sure it installed
+
+# install grub sleek theme dark
+cd $HOME/Downloads/
+git clone https://github.com/sandesh236/sleek--themes
+cd sleek--themes
+chmod +x install.sh
+sudo ./install.sh
+sleep 3 # wait 3 to make sure it installed
+
+# install fluentdark theme
+cd $HOME/Downloads/
+git clone https://github.com/vinceliuice/Fluent-gtk-theme
+cd Fluent-gtk-theme
+chmod +x install.sh
+./install.sh -c dark -s standard
+sleep 3 # wait 3 to make sure it installed
+
 # copy over dotfiles
 export PATH=$PATH:~/.local/bin
 cp -r $HOME/ArchObscurely/dotfiles/* $HOME/.config/
-sleep 1
+sleep 3 # wait 3 to make sure it copyed
 
-# basic config bspwm
-install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
-install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
-mkdir ~/.config/polybar/
-cp /usr/share/doc/polybar/config ~/.config/polybar/config
-systemctl enable lightdm
+# installing nvidia-tkg driver
+cd $HOME/Downloads/
+git clone https://github.com/Frogging-Family/nvidia-all.git
+cd nvidia-all
+makepkg -si
 
 echo -e "\nDone!\n"
 exit

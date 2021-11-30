@@ -7,6 +7,7 @@ echo -e "\nFINAL SETUP AND CONFIGURATION"
 echo -e "\nEnabling essential services"
 
 sudo ntpd -qg
+sudo systemctl enable lightdm
 sudo systemctl enable ntpd.service
 sudo systemctl disable dhcpcd.service
 sudo systemctl stop dhcpcd.service
