@@ -44,7 +44,7 @@ yay -Syyu --noconfirm
 
 # copy over dotfiles
 export PATH=$PATH:~/.local/bin
-cp -r $HOME/ArchTitus/dotfiles/* $HOME/.config/
+cp -r $HOME/ArchObscurely/dotfiles/* $HOME/.config/
 sleep 1
 
 # basic config bspwm
