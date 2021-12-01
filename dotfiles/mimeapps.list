@@ -4,9 +4,14 @@ application/json=notepadqq.desktop
 x-scheme-handler/kite=kite-copilot.desktop
 text/html=brave.desktop
 image/jpeg=org.xfce.ristretto.desktop
+TerminalEmulator=kitty.desktop
+terminal=kitty.desktop
+terminal/emulator=kitty.desktop
+image/png=org.xfce.ristretto.desktop
 
 [Added Associations]
 text/plain=notepadqq.desktop;
 application/json=notepadqq.desktop;
 image/jpeg=org.xfce.ristretto.desktop;
 application/octet-stream=notepadqq.desktop;
+image/png=org.xfce.ristretto.desktop;

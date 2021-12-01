@@ -21,7 +21,7 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 # Run polybar
-~/.config/polybar/launch.sh --blocks
+~/.config/polybar/launch.sh --shapes
 
 # Set resolution
 xrandr --output DVI-D-0 --mode 1920x1080 --rate 144

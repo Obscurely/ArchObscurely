@@ -243,6 +243,7 @@ PKGS=(
 'wine-tkg-staging-fsync-git' # wine
 'xdg-user-dirs' # creates user dirs
 'xf86-input-libinput' # input driver
+'xfce4-settings' # settings app
 'xorg-fonts-type1' # fon ts
 'zeroconf-ioslave' # zeroconf support
 'zip' # compression

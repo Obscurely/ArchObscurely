@@ -6,10 +6,6 @@
 super + Return
 	kitty
 
-# program launcher
-super + @space
-	dmenu_run
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -120,17 +116,33 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# open rofi run
+# open rofi app launcher
 F12
-	rofi -show run
+	~/.config/rofi/launchers/colorful/launcher.sh
 
-# open rofi window
+# open quick app launcher (rofi applet)
 F11
+	~/.config/rofi/applets/menu/apps.sh
+
+# open rofi window switcher (classic)
+F10
 	rofi -show window
 
 # open thunar
 super + e
 	thunar
+
+# open code-oss
+super + v
+	code
+
+# open discord
+super + d
+	discord
+
+# open steam
+super + x
+	steam
 
 # media audio mute
 XF86AudioMute
