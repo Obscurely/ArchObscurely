@@ -144,6 +144,10 @@ super + d
 super + x
 	steam
 
+# open waterfox
+super + q
+	waterfox-g4
+
 # media audio mute
 XF86AudioMute
     pactl set-sink-mute 0 toggle
