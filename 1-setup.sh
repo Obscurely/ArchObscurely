@@ -92,7 +92,6 @@ PKGS=(
 'efibootmgr' # EFI boot
 'exfat-utils' # exfat file support
 'feh' # sets wallpaper
-'firefox' # firefox client
 'fuse2' # fuse
 'fuse3' # fuse
 'fuseiso' # fuse

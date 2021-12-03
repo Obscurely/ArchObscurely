@@ -32,6 +32,7 @@ PKGS=(
 'ttf-meslo' # Nerdfont package
 'ttf-ms-fonts' # fonts
 'ttf-roboto' # font
+'waterfox-g4-bin' # waterfox browser (firefox without mozzila)
 'zoom' # video conferences
 )
 
