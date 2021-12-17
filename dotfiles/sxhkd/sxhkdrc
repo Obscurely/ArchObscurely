@@ -128,6 +128,10 @@ F11
 F10
 	rofi -show window
 
+# toggle polybar bar show
+super + alt + s
+	polybar-msg cmd toggle
+
 # open thunar
 super + e
 	thunar

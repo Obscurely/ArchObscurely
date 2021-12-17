@@ -5,3 +5,4 @@ file:///home/netrunner/Videos
 file:///home/netrunner/Music
 file:///home/netrunner/Templates
 file:///mnt/SSHD
+sftp://server@192.168.1.129:352/ Server Root
