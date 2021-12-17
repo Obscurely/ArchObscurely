@@ -24,6 +24,7 @@ PKGS=(
 'mangohud' # Gaming FPS Counter
 'mangohud-common' # mangohud utils
 'nerd-fonts-fira-code' # font
+'netdiscover' # utility for scanning local network
 'noto-fonts-emoji' # font
 'polybar' # fast, easy to use tool for creating status bars
 'ocs-url' # install packages from websites
