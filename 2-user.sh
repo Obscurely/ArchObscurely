@@ -47,7 +47,7 @@ yay -Syyu --noconfirm
 echo "Customizing system"
 
 # copy backgrounds to their folder and link them
-cp $HOME/ArchObscurely/background.jpg $HOME/Documents
+cp $HOME/ArchObscurely/background.jpg $HOME/Documents/background.jpg
 sudo ln -s "$HOME/Documents/background.jpg" /usr/share/backgrounds/background.jpg
 
 # installing polybar themes
@@ -83,6 +83,7 @@ sleep 3 # wait 3 to make sure it installed
 cd $HOME/Downloads/
 git clone https://github.com/sandesh236/sleek--themes
 cd sleek--themes
+cd "Sleek theme-dark"
 chmod +x install.sh
 sudo ./install.sh
 sleep 3 # wait 3 to make sure it installed
@@ -94,6 +95,13 @@ cd Fluent-gtk-theme
 chmod +x install.sh
 ./install.sh -c dark -s standard
 sleep 3 # wait 3 to make sure it installed
+
+# install volante cursor theme
+cd $HOME/Downloads/
+git clone https://github.com/varlesh/volantes-cursors.git
+cd volantes-cursors
+make build
+sudo make install
 
 # copy over dotfiles
 export PATH=$PATH:~/.local/bin
