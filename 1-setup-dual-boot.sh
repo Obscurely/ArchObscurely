@@ -65,7 +65,7 @@ PKGS=(
 'xorg-server' # xorg base
 'xorg-apps' # xorg base
 'xorg-drivers' # xorg base
-'xorg-xkill' # xorg base 
+'xorg-xkill' # xorg base
 'xorg-xinit' # xorg base
 'xterm' # xorg base
 'alsa-lib' # sound lib
@@ -79,6 +79,7 @@ PKGS=(
 'bind' # dns server
 'binutils' # gnu collection of utils
 'bleachbit' # os cleaner
+'bridge-utils' # virtualization
 'btrfs-progs' # btrfs file support
 'bspwm' # tiling window manager
 'clementine' # music player
@@ -87,9 +88,11 @@ PKGS=(
 'dbus' # os's dbus
 'dialog' # dialog boxes for script
 'discord' # discord client
+'dnsmasq' # virtualization
 'dosfstools' # fat32 file support
 'easyeffects' # audio effects
 'efibootmgr' # EFI boot
+'ebtables' # virtualization
 'exfat-utils' # exfat file support
 'feh' # sets wallpaper
 'fuse2' # fuse
@@ -123,6 +126,7 @@ PKGS=(
 'kdenlive' # video editor
 'keepassxc' # offline password manager
 'kitty' # terminal
+'legendary' # epic games cli interface
 'lib32-alsa-lib' # sound lib32
 'lib32-alsa-plugins' # sound lib32
 'lib32-libpng' # lib for png files
@@ -155,6 +159,7 @@ PKGS=(
 'libpulse' # sound lib
 'libxcomposite' # wine dependency
 'libxinerama' # wine dependency
+'libguestfs' # virtualization
 'libva' # wine dependency
 'libgcrypt' # wine dependency
 'libxslt' # wine dependency
@@ -167,7 +172,7 @@ PKGS=(
 'linux-zen-headers' # linux zen kernel headers
 'linux-tkg-pds' # linux tkg kernel with pds cpu scheduler
 'linux-tkg-pds-headers' # linux tkg kernel with pds cpu scheduler headers
-'lutris' # lutris client 
+'lutris' # lutris client
 'lxappearance' # configure os appearance
 'lzop' # compression
 'make' # make util for building code
@@ -187,6 +192,7 @@ PKGS=(
 'obs-studio' # recodring software
 'onlyoffice' # good office suite
 'openal' # wine dependency
+'openbsd-netcat' # virtualizatoin
 'opencl-icd-loader' # wine dependency
 'p7zip' # compression
 'pacman-contrib' # essential
@@ -203,6 +209,7 @@ PKGS=(
 'pipewire-alsa'	 # sound
 'python-pip' # python's pip utility
 'qbittorrent' # torrent software
+'qemu' # virtualization
 'ristretto' # image viewer
 'rofi' # window switcher
 'rsync' # sync files
@@ -233,6 +240,9 @@ PKGS=(
 'usbutils' # essential
 'vim' # essential
 'v4l-utils' # wine dependency
+'vde2' # virtualization
+'virt-manager' # virtualization
+'virt-viewer' # virtualization
 'vulkan-icd-loader' # wine dependency
 'wget' # wget, download's stuff from web
 'which' # util to show full paths of commands
@@ -259,7 +269,7 @@ done
 
 #
 # determine processor type and install microcode
-# 
+#
 proc_type=$(lscpu | awk '/Vendor ID:/ {print $3}')
 case "$proc_type" in
 	GenuineIntel)
@@ -272,7 +282,7 @@ case "$proc_type" in
 		pacman -S --noconfirm amd-ucode
 		proc_ucode=amd-ucode.img
 		;;
-esac	
+esac
 
 # Graphics Drivers find and install
 if lspci | grep -E "NVIDIA|GeForce"; then
@@ -304,7 +314,7 @@ echo "username=$username" >> /root/ArchObscurely/install.conf
 fi
 if [ $(whoami) = "root"  ];
 then
-    useradd -m -G wheel -s /bin/bash $username 
+    useradd -m -G wheel -s /bin/bash $username
 	passwd $username
 	cp -R /root/ArchObscurely /home/$username/
     chown -R $username: /home/$username/ArchObscurely
@@ -313,4 +323,3 @@ then
 else
 	echo "You are already a user proceed with aur installs"
 fi
-

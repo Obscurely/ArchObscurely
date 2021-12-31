@@ -12,6 +12,10 @@ sudo systemctl enable ntpd.service
 sudo systemctl disable dhcpcd.service
 sudo systemctl stop dhcpcd.service
 sudo systemctl enable NetworkManager.service
+sudo systemctl enable libvirtd.service
+
+echo -e "\nAdding current user to libvirtd group"
+sudo usermod -G libvirt -a $(whoami)
 
 echo "-------------------------------------------------"
 echo "               Tweaking Arch a bit               "
@@ -90,10 +94,10 @@ sudo sysctl -w vm.swappiness = 10
 rm -rf /home/$(whoami)/Documents/temp
 
 # Setup UFW rules
-sudo ufw limit 22/tcp  
-sudo ufw allow 80/tcp  
-sudo ufw allow 443/tcp  
-sudo ufw default deny incoming  
+sudo ufw limit 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
 
