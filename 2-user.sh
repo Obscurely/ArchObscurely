@@ -23,6 +23,7 @@ PKGS=(
 'haruna' # video player
 'mangohud' # Gaming FPS Counter
 'mangohud-common' # mangohud utils
+'mat2' # metadata remover tool
 'nerd-fonts-fira-code' # font
 'netdiscover' # utility for scanning local network
 'noto-fonts-emoji' # font
