@@ -117,20 +117,24 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # open rofi app launcher
-F12
+super + F12
 	~/.config/rofi/launchers/colorful/launcher.sh
 
 # open quick app launcher (rofi applet)
-F11
+super + F11
 	~/.config/rofi/applets/menu/apps.sh
 
 # open rofi window switcher (classic)
-F10
+super + F10
 	rofi -show window
 
 # toggle polybar bar show
 super + alt + s
 	polybar-msg cmd toggle
+	
+# kill picom compositor
+super + alt + p
+	killall picom
 
 # open thunar
 super + e
