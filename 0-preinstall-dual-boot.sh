@@ -6,7 +6,7 @@ iso=$(curl -4 ifconfig.co/country-iso)
 timedatectl set-ntp true
 pacman -S --noconfirm pacman-contrib terminus-font
 setfont ter-v22b
-sed -i 's/^#Para/Para/' /etc/pacman.conf
+sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 pacman -S --noconfirm reflector rsync
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 
@@ -19,7 +19,7 @@ mkdir /mnt
 
 
 echo -e "\nInstalling prereqs...\n$HR"
-pacman -S --noconfirm gptfdisk f2fs-tools xfsprogs
+pacman -S --noconfirm gptfdisk f2fs-tools xfsprogs glibc
 
 echo "--------------------------------------"
 echo -e "\nFormatting disks...\n$HR"

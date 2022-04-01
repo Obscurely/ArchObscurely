@@ -1,5 +1,19 @@
 #!/usr/bin/env bash
 
+# Making xdg dirs manually (also in the dotfiles it's the config for them), this prevents errors where the package wouldn't create the dirs
+mkdir $HOME/Desktop
+mkdir $HOME/Downloads
+mkdir $HOME/Templates
+mkdir $HOME/Public
+mkdir $HOME/Documents
+mkdir $HOME/Music
+mkdir $HOME/Pictures
+mkdir $HOME/Videos
+
+# Cache and .config dirs, in order to avoid any errors
+mkdir $HOME/.config
+mkdir $HOME/.cache
+
 echo -e "\nINSTALLING AUR SOFTWARE\n"
 # You can solve users running this script as root with this and then doing the same for the next for statement. However I will leave this up to you.
 

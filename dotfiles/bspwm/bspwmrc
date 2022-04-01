@@ -39,5 +39,6 @@ feh --bg-fill ~/Documents/background.jpg
 
 # Fix cursor not showing on desktop (background)
 lxappearance &
+lxpolkit &
 sleep 3
 killall lxappearance

@@ -29,7 +29,8 @@ sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
 timedatectl --no-ask-password set-timezone Europe/Bucharest
 timedatectl --no-ask-password set-ntp 1
-localectl --no-ask-password set-locale LANG="en_US.UTF-8" LC_COLLATE="C" LC_TIME="en_US.UTF-8"
+localectl --no-ask-password set-locale LANG="en_US.UTF-8" LC_TIME="en_US.UTF-8"
+ln -s /usr/share/zoneinfo/Europe/Bucharest /etc/localtime
 hwclock --systohc --utc
 
 # Set keymaps
@@ -37,9 +38,10 @@ localectl --no-ask-password set-keymap us
 
 # Add sudo no password rights
 sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
+sed -i 's/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
 
 # Add parallel downloading
-sed -i 's/^#Para/Para/' /etc/pacman.conf
+sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 
 # Enable multilib
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
@@ -107,6 +109,7 @@ PKGS=(
 'gnome-keyring' # gnome's keyring
 'gnu-free-fonts' # fonts
 'gnutls' # free implementation of tls, ssl and dtls protocols
+'go' # for compiling yay
 'gtk3' # gtk3 widget toolkit
 'gsfonts' # fonts
 'gst-plugins-base' # gst base plugins
@@ -121,6 +124,7 @@ PKGS=(
 'gvfs' # thunar trash support etc
 'haveged' # antropy generator
 'htop' # console procces viewer
+'inkscape' # for compiling the cursor and useful for other themes
 'iptables-nft' # iptables nft
 'jdk-openjdk' # Java 17
 'kdenlive' # video editor
@@ -174,6 +178,7 @@ PKGS=(
 'linux-tkg-pds-headers' # linux tkg kernel with pds cpu scheduler headers
 'lutris' # lutris client
 'lxappearance' # configure os appearance
+'lxsession' # polkit authentification agent
 'lzop' # compression
 'make' # make util for building code
 'milou' # arm build system
@@ -274,12 +279,12 @@ proc_type=$(lscpu | awk '/Vendor ID:/ {print $3}')
 case "$proc_type" in
 	GenuineIntel)
 		print "Installing Intel microcode"
-		pacman -S --noconfirm intel-ucode
+		pacman -S --noconfirm --needed intel-ucode
 		proc_ucode=intel-ucode.img
 		;;
 	AuthenticAMD)
 		print "Installing AMD microcode"
-		pacman -S --noconfirm amd-ucode
+		pacman -S --noconfirm --needed amd-ucode
 		proc_ucode=amd-ucode.img
 		;;
 esac
@@ -314,7 +319,8 @@ echo "username=$username" >> /root/ArchObscurely/install.conf
 fi
 if [ $(whoami) = "root"  ];
 then
-    useradd -m -G wheel -s /bin/bash $username
+ 	groupadd libvirt
+    useradd -m -G wheel,libvirt -s /bin/bash $username
 	passwd $username
 	cp -R /root/ArchObscurely /home/$username/
     chown -R $username: /home/$username/ArchObscurely
