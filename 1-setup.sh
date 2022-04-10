@@ -97,6 +97,7 @@ PKGS=(
 'ebtables' # virtualization
 'exfat-utils' # exfat file support
 'feh' # sets wallpaper
+'flameshot' # screenshot daemon
 'fuse2' # fuse
 'fuse3' # fuse
 'fuseiso' # fuse
@@ -218,7 +219,6 @@ PKGS=(
 'ristretto' # image viewer
 'rofi' # window switcher
 'rsync' # sync files
-'shutter' # screenshot utility
 'steam' # steam client
 'sdl_ttf' # some sort of font lib
 'speedtest-cli' # test network speed
@@ -240,6 +240,7 @@ PKGS=(
 'ttf-roboto' # font
 'ttf-ubuntu-font-family' # font
 'ufw' # firewall
+'ungoogled-chromium' # chromium browser without google's shit
 'unrar' # compression
 'unzip' # compression
 'usbutils' # essential

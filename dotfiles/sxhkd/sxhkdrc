@@ -140,9 +140,9 @@ super + alt + p
 super + e
 	thunar
 
-# open code-oss
+# open neovim and since it's running on kitty move kitty from first workspace to the second
 super + v
-	code
+	~/.config/bspwm/nvim.sh & sleep 0.5 && id=$(bspc query -N -n); bspc node -d ^2; bspc node -f ${id}}
 
 # open discord
 super + d
@@ -167,3 +167,28 @@ XF86AudioRaiseVolume
 # media volume down
 XF86AudioLowerVolume
     pactl set-sink-volume 0 -2%
+
+# screenshot display and copy to clipboard
+Print
+	flameshot full -c
+
+# screenshot display and save picture
+super + Print
+	flameshot full -p ~/Pictures/screenshots/
+
+# screenshot screen and copy to clipboard
+shift + Print
+	flameshot screen -c	
+
+# screenshot screen and save picture
+super + shift + Print
+	flameshot screen -p ~/Pictures/screenshots/
+
+# screenshot gui and copy to clipboard
+ctrl + Print
+	flameshot gui -c
+
+# screenshot gui and save picture
+ctrl + super + Print
+	flameshot gui -p ~/Pictures/screenshots/
+

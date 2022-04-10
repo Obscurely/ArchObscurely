@@ -20,7 +20,7 @@
         <property name="Y" type="int" value="0"/>
       </property>
     </property>
-    <property name="DP-0" type="string" value="GBT 28&quot;">
+    <property name="DP-0" type="string" value="GIGA-BYTE TECHNOLOGY CO., LTD. 28&quot;">
       <property name="Active" type="bool" value="true"/>
       <property name="EDID" type="string" value="6740dd6ea4d966f85e0a27ef4a701dc7f42e27a4"/>
       <property name="Resolution" type="string" value="2560x1440"/>
@@ -56,7 +56,7 @@
         <property name="Y" type="int" value="0"/>
       </property>
     </property>
-    <property name="DP-0" type="string" value="GBT 28&quot;">
+    <property name="DP-0" type="string" value="GIGA-BYTE TECHNOLOGY CO., LTD. 28&quot;">
       <property name="Active" type="bool" value="true"/>
       <property name="EDID" type="string" value="6740dd6ea4d966f85e0a27ef4a701dc7f42e27a4"/>
       <property name="Resolution" type="string" value="2560x1440"/>

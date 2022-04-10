@@ -5,5 +5,7 @@
     <property name="navigationbar" type="empty">
       <property name="position" type="string" value="left"/>
     </property>
+    <property name="height" type="uint" value="1389"/>
+    <property name="width" type="uint" value="2544"/>
   </property>
 </channel>

@@ -14,6 +14,9 @@ mkdir $HOME/Videos
 mkdir $HOME/.config
 mkdir $HOME/.cache
 
+# Dir where flameshot saves screenshots
+mkdir $HOME/Pictures/screenshots
+
 echo -e "\nINSTALLING AUR SOFTWARE\n"
 # You can solve users running this script as root with this and then doing the same for the next for statement. However I will leave this up to you.
 
@@ -31,10 +34,8 @@ ln -s "$HOME/zsh/.zshrc" $HOME/.zshrc
 PKGS=(
 'autojump' # zsh autojump
 'awesome-terminal-fonts' # font
-'brave-bin' # Brave Browser
 'dxvk-bin' # DXVK DirectX to Vulcan
-'github-desktop-bin' # Github Desktop sync
-'haruna' # video player
+'haruna-git' # video player
 'mangohud' # Gaming FPS Counter
 'mangohud-common' # mangohud utils
 'mat2' # metadata remover tool
