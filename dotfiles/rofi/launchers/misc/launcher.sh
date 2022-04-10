@@ -12,7 +12,7 @@
 # gnome_do	slingshot		appdrawer			appdrawer_alt	appfolder
 # column	row				row_center			screen			row_dock		row_dropdown
 
-theme="blurry_full"
+theme="launchpad"
 dir="$HOME/.config/rofi/launchers/misc"
 
 # comment these lines to disable random style
