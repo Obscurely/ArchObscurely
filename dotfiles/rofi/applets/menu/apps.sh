@@ -13,10 +13,10 @@ rofi_command="rofi -theme $dir/apps.rasi"
 # Links
 terminal=""
 files=""
-editor=""
-browser=""
+editor=""
+browser=""
 music=""
-settings=""
+settings=""
 
 # Error msg
 msg() {
@@ -35,7 +35,7 @@ case $chosen in
 		thunar
         ;;
     $editor)
-		notepadqq
+		~/.config/bspwm/nvim.sh
         ;;
     $browser)
 		firefox
@@ -44,6 +44,6 @@ case $chosen in
 		clementine
         ;;
     $settings)
-		xfce4-settings-manager
+		keepassxc
         ;;
 esac

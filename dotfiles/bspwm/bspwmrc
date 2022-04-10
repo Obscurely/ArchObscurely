@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # start picom with config
-picom --config ~/.config/picom.conf &
+picom --experimental-backend --config ~/.config/picom.conf &
 
 # Make sure sxhkd is always running
 while :; do

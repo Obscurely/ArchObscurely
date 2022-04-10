@@ -208,7 +208,6 @@ PKGS=(
 'postman' # software for sending http requests
 'powerpill' # pacman that download's from multiple mirrors
 'python' # python binaries
-'picom' # xorg compositor
 'powerline-fonts' # fonts
 'pipewire' # sound
 'pipewire-pulse' # sound

@@ -118,15 +118,19 @@ super + {Left,Down,Up,Right}
 
 # open rofi app launcher
 super + F12
-	~/.config/rofi/launchers/colorful/launcher.sh
+	.config/rofi/launchers/misc/launcher.sh
 
 # open quick app launcher (rofi applet)
 super + F11
-	~/.config/rofi/applets/menu/apps.sh
+	~/.config/rofi/applets/android/apps.sh
 
 # open rofi window switcher (classic)
-super + F10
+alt + Tab
 	rofi -show window
+
+# open rofi time
+super + F1
+	~/.config/rofi/applets/applets/time.sh
 
 # toggle polybar bar show
 super + alt + s
@@ -142,7 +146,7 @@ super + e
 
 # open neovim and since it's running on kitty move kitty from first workspace to the second
 super + v
-	~/.config/bspwm/nvim.sh & sleep 0.5 && id=$(bspc query -N -n); bspc node -d ^2; bspc node -f ${id}}
+	~/.config/bspwm/nvim.sh 
 
 # open discord
 super + d

@@ -44,6 +44,7 @@ PKGS=(
 'noto-fonts-emoji' # font
 'polybar' # fast, easy to use tool for creating status bars
 'ocs-url' # install packages from websites
+'picom-jonaburg-fix' # xorg compositor (picom with rounded corners support and some fixes)
 'ttf-droid' # font
 'ttf-hack' # font
 'ttf-meslo' # Nerdfont package
@@ -54,7 +55,7 @@ PKGS=(
 )
 
 for PKG in "${PKGS[@]}"; do
-    yay -S --noconfirm $PKG
+    yay -S --noconfirm $PKG --needed
 done
 
 # Upgrade with yay
