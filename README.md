@@ -49,7 +49,7 @@ or
 ![terms](screenshots/terms.png)
 
 ### Browsers side by side
-![browsers](screnshots/browsers.png)
+![browsers](screenshots/browsers.png)
 
 ### Screen 2
 ![screen2](screenshots/screen2.png)
