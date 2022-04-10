@@ -33,6 +33,9 @@ or
 ### Screen 1
 ![screen1](screenshots/screen1.png)
 
+### Screen 2
+![screen2](screenshots/screen2.png)
+
 ### App launcher
 ![app launcher](screenshots/app_launcher.png)
 
@@ -50,6 +53,3 @@ or
 
 ### Browsers side by side
 ![browsers](screenshots/browsers.png)
-
-### Screen 2
-![screen2](screenshots/screen2.png)
