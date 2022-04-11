@@ -62,8 +62,6 @@ bspc rule -a Virt-manager	desktop='^9'	follow=on
 bspc rule -a Zoom			desktop='^9'	follow=on # doesn't work (for some reason)
 bspc rule -a qBittorrent	desktop='^8' 	follow=on
 
-# Run polybar
-~/.config/polybar/launch.sh --shapes
 
 # Set resolution
 xrandr --output DVI-D-0 --mode 1920x1080 --rate 144
@@ -76,6 +74,9 @@ xinput --set-prop 8 'libinput Accel Speed' -1
 
 # Set background
 feh --bg-fill ~/Documents/background.jpg
+
+# Run polybar
+~/.config/polybar/launch.sh --shapes
 
 # Auto-Start
 bspc desktop -f ^1
