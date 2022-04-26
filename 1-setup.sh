@@ -196,6 +196,7 @@ PKGS=(
 'openssh' # server ssh
 'os-prober' # scans for any other os (for grub boot)
 'obs-studio' # recodring software
+'obsidian' # great taking notes app
 'onlyoffice' # good office suite
 'openal' # wine dependency
 'openbsd-netcat' # virtualizatoin
