@@ -140,13 +140,25 @@ super + alt + s
 super + alt + p
 	killall picom
 
+# start picom compsitor
+super + shift + p
+	picom --experimental-backend --config ~/.config/picom.conf
+
+# restart polybar
+super + shift + b
+	killall polybar
+
+# start polybar
+super + alt + b
+	~/.config/polybar/launch.sh --shapes
+
 # open thunar
 super + e
 	thunar
 
 # open neovim and since it's running on kitty move kitty from first workspace to the second
 super + v
-	~/.config/bspwm/nvim.sh 
+	kitty -o font_size=16 -o window_margin_width=0 -d $HOME/Code --start-as maximized --class NeoVim --name NeoVim --detach
 
 # open discord
 super + d
@@ -195,4 +207,8 @@ ctrl + Print
 # screenshot gui and save picture
 ctrl + super + Print
 	flameshot gui -p ~/Pictures/screenshots/
+
+# open Obsidian
+super + n
+	obsidian
 
