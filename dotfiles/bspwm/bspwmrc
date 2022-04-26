@@ -61,6 +61,8 @@ bspc rule -a Steam			desktop='^4'	follow=on
 bspc rule -a Virt-manager	desktop='^9'	follow=on
 bspc rule -a Zoom			desktop='^9'	follow=on # doesn't work (for some reason)
 bspc rule -a qBittorrent	desktop='^8' 	follow=on
+bspc rule -a obsidian 		desktop='^2' 	follow=on
+bspc rule -a NeoVim 		desktop='^2' 	follow=on # Open the NeoVim terminal window done by keybinds super + v on the second desktop
 
 
 # Set resolution
