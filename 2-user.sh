@@ -47,6 +47,7 @@ PKGS=(
 'picom-jonaburg-fix' # xorg compositor (picom with rounded corners support and some fixes)
 'ttf-droid' # font
 'ttf-hack' # font
+'ttf-iosevka-nerd' # nerd font for polybar
 'ttf-meslo' # Nerdfont package
 'ttf-ms-fonts' # fonts
 'ttf-roboto' # font
