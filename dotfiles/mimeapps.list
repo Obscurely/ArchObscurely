@@ -65,6 +65,7 @@ video/x-ms-wmv=org.kde.haruna.desktop
 video/x-msvideo=org.kde.haruna.desktop
 video/x-ogm+ogg=org.kde.haruna.desktop
 video/x-theora+ogg=org.kde.haruna.desktop
+x-scheme-handler/mailto=xfce4-mail-reader.desktop
 
 [Added Associations]
 text/plain=notepadqq.desktop;
@@ -99,7 +100,7 @@ image/avif=org.xfce.ristretto.desktop;
 image/astc=org.xfce.ristretto.desktop;
 image/dpx=org.xfce.ristretto.desktop;
 image/emf=org.xfce.ristretto.desktop;
-image/gif=org.xfce.ristretto.desktop;
+image/gif=brave-browser.desktop;org.xfce.ristretto.desktop;
 image/heif=org.xfce.ristretto.desktop;
 image/ief=org.xfce.ristretto.desktop;
 image/jp2=org.xfce.ristretto.desktop;
@@ -134,3 +135,6 @@ video/x-ms-wmv=org.kde.haruna.desktop;
 video/x-msvideo=org.kde.haruna.desktop;
 video/x-ogm+ogg=org.kde.haruna.desktop;
 video/x-theora+ogg=org.kde.haruna.desktop;
+application/x-shellscript=notepadqq.desktop;
+x-scheme-handler/mailto=xfce4-mail-reader.desktop;
+application/x-ms-dos-executable=wine.desktop;

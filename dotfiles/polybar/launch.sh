@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
 
-dir="$HOME/.config/polybar"
-themes=(`ls --hide="launch.sh" $dir`)
+## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 
+## Files and Directories
+DIR="$HOME/.config/polybar"
+
+## Launch Polybar with selected style
 launch_bar() {
+	STYLE="default"
+
 	# Terminate already running bar instances
 	killall -q polybar
 
@@ -11,77 +17,14 @@ launch_bar() {
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 	# Launch the bar
-	if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
-		polybar -q top -c "$dir/$style/config.ini" &
-		polybar -q bottom -c "$dir/$style/config.ini" &
-	elif [[ "$style" == "pwidgets" ]]; then
-		bash "$dir"/pwidgets/launch.sh --main
+	if type "xrandr"; then
+	  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+		MONITOR=$m polybar -q main -c "$DIR/$STYLE/config.ini" &
+	  done
 	else
-		if type "xrandr"; then
-		  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-		    MONITOR=$m polybar -q main -c "$dir/$style/config.ini" &
-		  done
-		else
-		  polybar -q main -c "$dir/$style/config.ini" &
-		fi	
-	fi
+	  polybar -q main -c "$DIR/$STYLE/config.ini" &
+	fi	
 }
 
-if [[ "$1" == "--material" ]]; then
-	style="material"
-	launch_bar
-
-elif [[ "$1" == "--shades" ]]; then
-	style="shades"
-	launch_bar
-
-elif [[ "$1" == "--hack" ]]; then
-	style="hack"
-	launch_bar
-
-elif [[ "$1" == "--docky" ]]; then
-	style="docky"
-	launch_bar
-
-elif [[ "$1" == "--cuts" ]]; then
-	style="cuts"
-	launch_bar
-
-elif [[ "$1" == "--shapes" ]]; then
-	style="shapes"
-	launch_bar
-
-elif [[ "$1" == "--grayblocks" ]]; then
-	style="grayblocks"
-	launch_bar
-
-elif [[ "$1" == "--blocks" ]]; then
-	style="blocks"
-	launch_bar
-
-elif [[ "$1" == "--colorblocks" ]]; then
-	style="colorblocks"
-	launch_bar
-
-elif [[ "$1" == "--forest" ]]; then
-	style="forest"
-	launch_bar
-
-elif [[ "$1" == "--pwidgets" ]]; then
-	style="pwidgets"
-	launch_bar
-
-elif [[ "$1" == "--panels" ]]; then
-	style="panels"
-	launch_bar
-
-else
-	cat <<- EOF
-	Usage : launch.sh --theme
-		
-	Available Themes :
-	--blocks    --colorblocks    --cuts      --docky
-	--forest    --grayblocks     --hack      --material
-	--panels    --pwidgets       --shades    --shapes
-	EOF
-fi
+# Execute functions
+launch_bar

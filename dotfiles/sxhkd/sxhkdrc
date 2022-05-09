@@ -156,7 +156,7 @@ super + alt + b
 super + e
 	thunar
 
-# open neovim and since it's running on kitty move kitty from first workspace to the second
+# Open kitty with custom settings in order to go well with NeoVim
 super + v
 	kitty -o font_size=16 -o window_margin_width=0 -d $HOME/Code --start-as maximized --class NeoVim --name NeoVim --detach
 

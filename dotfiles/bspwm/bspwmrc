@@ -64,7 +64,6 @@ bspc rule -a qBittorrent	desktop='^8' 	follow=on
 bspc rule -a obsidian 		desktop='^2' 	follow=on
 bspc rule -a NeoVim 		desktop='^2' 	follow=on # Open the NeoVim terminal window done by keybinds super + v on the second desktop
 
-
 # Set resolution
 xrandr --output DVI-D-0 --mode 1920x1080 --rate 144
 xrandr --output DP-0 --mode 2560x1440 --rate 165
@@ -78,7 +77,7 @@ xinput --set-prop 8 'libinput Accel Speed' -1
 feh --bg-fill ~/Documents/background.jpg
 
 # Run polybar
-~/.config/polybar/launch.sh --shapes
+~/.config/polybar/launch.sh
 
 # Auto-Start
 bspc desktop -f ^1
