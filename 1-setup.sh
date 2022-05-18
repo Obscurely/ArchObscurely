@@ -123,6 +123,7 @@ PKGS=(
 'gst-plugins-good' # gst plugins good
 'gst-plugins-ugly' # gst plugins ugly
 'gvfs' # thunar trash support etc
+'gvfs-mtp' # mtp devices support in thunar
 'haveged' # antropy generator
 'htop' # console procces viewer
 'inkscape' # for compiling the cursor and useful for other themes
