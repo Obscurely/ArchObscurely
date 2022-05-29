@@ -173,6 +173,8 @@ PKGS=(
 'libtool' # programming lib
 'lightdm' # lightweight display manager
 'lightdm-webkit2-greeter' # greeter for lightdm
+'linux-lts' # linux lts kernel, just in case
+'linux-lts-headers' # lts kernel headers
 'linux-zen' # linux zen kernel
 'linux-firmware' # firmware filex for linux
 'linux-zen-headers' # linux zen kernel headers
