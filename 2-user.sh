@@ -45,6 +45,7 @@ PKGS=(
 'polybar' # fast, easy to use tool for creating status bars
 'ocs-url' # install packages from websites
 'picom-jonaburg-fix' # xorg compositor (picom with rounded corners support and some fixes)
+'sonixd' # app to interact with my self hosted instance of navidrome (music server w/ web interface)
 'ttf-droid' # font
 'ttf-hack' # font
 'ttf-iosevka-nerd' # nerd font for polybar
