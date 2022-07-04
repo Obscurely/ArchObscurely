@@ -289,15 +289,15 @@ AuthenticAMD)
   ;;
 esac
 
-# Graphics Drivers find and install
-if lspci | grep -E "NVIDIA|GeForce"; then
-  pacman -S nvidia-dkms --noconfirm --needed
-  nvidia-xconfig
-elif lspci | grep -E "Radeon"; then
-  pacman -S xf86-video-amdgpu --noconfirm --needed
-elif lspci | grep -E "Integrated Graphics Controller"; then
-  pacman -S libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils --needed --noconfirm
-fi
+# Graphics Drivers find and install (for other graphics card uncomment this and remove nvidia-dkms pkg aswell as nvidia all tkg from later scripts)
+# if lspci | grep -E "NVIDIA|GeForce"; then
+#  pacman -S nvidia-dkms --noconfirm --needed
+#   nvidia-xconfig
+# elif lspci | grep -E "Radeon"; then
+#   pacman -S xf86-video-amdgpu --noconfirm --needed
+# elif lspci | grep -E "Integrated Graphics Controller"; then
+#   pacman -S libva-intel-driver libvdpau-va-gl lib32-vulkan-intel vulkan-intel libva-intel-driver libva-utils --needed --noconfirm
+# fi
 
 echo -e "\nDone!\n"
 
