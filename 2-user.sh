@@ -32,32 +32,31 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/powerleve
 ln -s "$HOME/zsh/.zshrc" $HOME/.zshrc
 
 PKGS=(
-'autojump' # zsh autojump
-'awesome-terminal-fonts' # font
-'dxvk-bin' # DXVK DirectX to Vulcan
-'haruna-git' # video player
-'mangohud' # Gaming FPS Counter
-'mangohud-common' # mangohud utils
-'mat2' # metadata remover tool
-'nerd-fonts-fira-code' # font
-'netdiscover' # utility for scanning local network
-'noto-fonts-emoji' # font
-'polybar' # fast, easy to use tool for creating status bars
-'ocs-url' # install packages from websites
-'picom-jonaburg-fix' # xorg compositor (picom with rounded corners support and some fixes)
-'sonixd' # app to interact with my self hosted instance of navidrome (music server w/ web interface)
-'ttf-droid' # font
-'ttf-hack' # font
-'ttf-iosevka-nerd' # nerd font for polybar
-'ttf-meslo' # Nerdfont package
-'ttf-ms-fonts' # fonts
-'ttf-roboto' # font
-'waterfox-g4-bin' # waterfox browser (firefox without mozzila)
-'zoom' # video conferences
+  'autojump'               # zsh autojump
+  'awesome-terminal-fonts' # font
+  'dxvk-bin'               # DXVK DirectX to Vulcan
+  'haruna-git'             # video player
+  'mangohud'               # Gaming FPS Counter
+  'mangohud-common'        # mangohud utils
+  'mat2'                   # metadata remover tool
+  'nerd-fonts-fira-code'   # font
+  'netdiscover'            # utility for scanning local network
+  'noto-fonts-emoji'       # font
+  'polybar'                # fast, easy to use tool for creating status bars
+  'picom-jonaburg-fix'     # xorg compositor (picom with rounded corners support and some fixes)
+  'sonixd'                 # app to interact with my self hosted instance of navidrome (music server w/ web interface)
+  'ttf-droid'              # font
+  'ttf-hack'               # font
+  'ttf-iosevka-nerd'       # nerd font for polybar
+  'ttf-meslo'              # Nerdfont package
+  'ttf-ms-fonts'           # fonts
+  'ttf-roboto'             # font
+  'waterfox-g4-bin'        # waterfox browser (firefox without mozzila)
+  'zoom'                   # video conferences
 )
 
 for PKG in "${PKGS[@]}"; do
-    yay -S --noconfirm $PKG --needed
+  yay -S --noconfirm $PKG --needed
 done
 
 # Upgrade with yay
