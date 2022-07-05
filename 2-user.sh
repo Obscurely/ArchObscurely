@@ -105,7 +105,9 @@ cd sleek--themes
 cd "Sleek theme-dark"
 chmod +x install.sh
 sudo ./install.sh
-sleep 3 # wait 3 to make sure it installed
+sleep 3 # wait 3 to prevent any issues
+sudo ./install.sh # run again install since there seems, at least at the time of this commit, to be a bug and not work straight up
+sleep 3 # wait 3 to finish process and prevent issues
 
 # install fluentdark theme
 cd $HOME/Downloads/
