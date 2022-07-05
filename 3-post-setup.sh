@@ -103,16 +103,17 @@ echo "
 # Cleaning
 ###############################################################################
 "
+# Delete left over folders
+sudo rm -rf /home/$(whoami)/ArchObscurely
+sudo rm -rf /home/$(whoami)/yay
+sudo rm -rf /home/$(whoami)/go
+
 # Remove no password sudo rights
 sed -i 's/^%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
 sed -i 's/^%wheel ALL=(ALL:ALL) NOPASSWD: ALL/# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
 # Add sudo rights
 sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
-
-# Delete left over folders
-rm -rf $HOME/ArchObscurely
-rm -rf $HOME/yay
 
 # Replace in the same state
 cd $pwd
