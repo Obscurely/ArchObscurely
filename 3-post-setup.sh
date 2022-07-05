@@ -4,6 +4,10 @@ echo -e "\nFINAL SETUP AND CONFIGURATION"
 
 # ------------------------------------------------------------------------
 
+echo -e "\nCopying xorg conf to fix lightdm multi monitor setup"
+
+sudo cp $HOME/ArchObscurely/xorg/52-resolution-fix.conf /etc/X11/xorg.conf.d/.
+
 echo -e "\nEnabling essential services"
 
 sudo ntpd -qg
