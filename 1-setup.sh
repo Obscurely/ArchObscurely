@@ -59,6 +59,9 @@ sleep 3 # making sure the file actually got changed, without can be buggy some t
 pacman -Sy archlinux-keyring ---noconfirm
 pacman -Sy # another one to chaotic-aur database
 
+echo -e "\nApplying sha512 fix for dkms modules" # should be temporary, and removed once dkms is fixed
+sudo ln -s /usr/bin/sha512sum /usr/bin/sha512
+
 echo -e "\nInstalling Base System\n"
 
 PKGS=(
