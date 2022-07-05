@@ -42,6 +42,7 @@ PKGS=(
   'nerd-fonts-fira-code'   # font
   'netdiscover'            # utility for scanning local network
   'noto-fonts-emoji'       # font
+  'paru'				   # Like yay but coded in rust, I like it more, but for stability sake I use yay to install system
   'polybar'                # fast, easy to use tool for creating status bars
   'picom-jonaburg-fix'     # xorg compositor (picom with rounded corners support and some fixes)
   'sonixd'                 # app to interact with my self hosted instance of navidrome (music server w/ web interface)
